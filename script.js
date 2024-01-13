@@ -4,6 +4,7 @@ let winPatters = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 
 let winnerMsg = document.querySelector(".winner-msg");
 let newGame = document.querySelector("#new-game");
 let result = document.querySelector(".result");
+let box = document.querySelector("#box");
 
 let turn = true;
 let gameWin = false;
@@ -30,6 +31,7 @@ boxes.forEach((box, index) => {
 
 let showWinner = (winner) => {
     result.classList.remove("hide");
+    box.classList.add("hide");
     let Color;
     if (winner == "X") {
         Color = "blue";
@@ -47,6 +49,7 @@ let showWinner = (winner) => {
 
 let draw = () => {
     result.classList.remove("hide");
+    box.classList.add("hide");
     winnerMsg.innerText = "Draw!"
     boxes.forEach((box) => {
       box.removeEventListener("click");
