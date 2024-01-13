@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    height: 100%;
+    background-color: var(--primary-color);
+
+}
+:root{
+    --primary-color:#D6F9DD;
+    --secondary-color: #99F7AB;
+}
+body{
+   height: 100%;
+}
+.heading{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    color: #191308;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.358);
+}
+.heading h1{
+    font-size: 3rem;
+}
+.heading p{
+    font-size: x-large;
+}
+.player{
+    display: flex;
+    gap: 3rem;
+    font-size: 1.3rem;
+}
+#X{
+    color: blue;
+}
+#O{
+    color: red;
+}
+.box{
+    height: 81%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.game-box-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+#reset{
+    font-size: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    
+    background-color: #3f6646;
+    color: #D6F9DD;
+    cursor: pointer;
+}
+#reset:hover{
+    background-color: #243a29;
+}
+.game-box-2{
+    border-radius: 1rem;
+    padding: 3rem;
+    background-color: var(--secondary-color);
+    /* box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.6); */
+}
+.game-box{
+    background-color: rgba(0, 0, 0, 0.589);
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 7rem 7rem 7rem;
+    grid-template-rows: 7rem 7rem 7rem;
+    gap: 0.4rem;
+}
+.cell{
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+.result{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.hide{
+    display: none;
+}
+.winner-msg{
+    font-size: 4rem;
+}
+#new-game{
+    text-align: center;
+    width: 15rem;
+    font-size: 2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    background-color: #3f6646;
+    color: #D6F9DD;
+    cursor: pointer;
+    text-decoration: none;
+}
+#new-game:hover{
+    background-color: #243a29;
+}
