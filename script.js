@@ -5,7 +5,7 @@ let winnerMsg = document.querySelector(".winner-msg");
 let newGame = document.querySelector("#new-game");
 let result = document.querySelector(".result");
 let box = document.querySelector("#box");
-
+let body = document.querySelector("body");
 let turn = true;
 let gameWin = false;
 let state = [false, false, false, false, false, false, false, false, false];
@@ -32,6 +32,7 @@ boxes.forEach((box, index) => {
 let showWinner = (winner) => {
     result.classList.remove("hide");
     box.classList.add("hide");
+    body.classList.add("overflow");
     let Color;
     if (winner == "X") {
         Color = "blue";
@@ -50,6 +51,7 @@ let showWinner = (winner) => {
 let draw = () => {
     result.classList.remove("hide");
     box.classList.add("hide");
+    body.classList.add("overflow");
     winnerMsg.innerText = "Draw!"
     boxes.forEach((box) => {
       box.removeEventListener("click");
