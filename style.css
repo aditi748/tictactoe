@@ -15,6 +15,7 @@ html{
 }
 body{
    height: 100%;
+   min-height: 750px;
 }
 .heading{
     text-align: center;
@@ -116,4 +117,15 @@ body{
 }
 #new-game:hover{
     background-color: #243a29;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 15px;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 14px;
+    }
 }
